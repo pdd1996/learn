@@ -1,0 +1,120 @@
+/* pages/course/activity/task/task.wxss */
+.header{
+  height: 70rpx;
+  padding-left:50rpx;
+  padding-top: 50rpx; 
+}
+ .info{
+  width: 94%;
+  height: 200rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  border-bottom: 2rpx solid #ccc;
+  position: relative;
+}
+.info textarea{
+  padding: 20rpx 0 0 20rpx; 
+}
+
+.content {
+  width: 94%;
+  height: 400rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  border-bottom: 2rpx solid #ccc;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative
+}
+.content text:first-child{
+  position: absolute;
+  top: 10%;
+  left: 4%;
+}
+.content textarea{
+   position: absolute;
+   top: 35%;
+  left: 4%;
+}
+.optClass{
+  width: 94%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding:0 30rpx;
+  flex-wrap:wrap;
+  
+}
+.optClass .optName{
+
+  width: 200rpx;
+}
+.optClass .optName text,.optClass .mesTit text{
+  color: #ce0a0a;
+}
+.optClass .optContent{
+  flex: 1;
+  text-align: right;
+  color: #666;
+  font-size: 32rpx;
+  font-size:24rpx;
+  color:#999;
+  
+}
+
+.optClass .uploadimgbox{
+  flex: 0 0 33.333%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+}
+.optClass .uploadimgbox .progress{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 208rpx;
+  z-index: 99;
+}
+.optClass .uploadimgbox .delbtn{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  z-index: 98;
+}
+.optClass .uploadimg,.optClass .uploadbtn{
+  display: block;
+  width: 100%;
+  height: 208rpx;
+}
+
+.subBtnBox .subBtn{
+  width: 80%;
+  display: block;
+  margin: 40rpx auto;
+  background-color: #97C8E3;
+  color: #000;
+  font-size: 32rpx;
+}
+.subBtnBox .subBtn.button-hover{
+  background-color: #ccc;
+}

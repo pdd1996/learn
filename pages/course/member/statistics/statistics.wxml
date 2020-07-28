@@ -1,0 +1,37 @@
+<!--pages/course/member/statistics/statistics.wxml-->
+<view class='conter'>
+
+    <view class='left'>
+        <text>平均书勤率</text>
+        <view class="container">
+
+     <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
+        </view>
+    </view>
+
+    <view class='right'>
+        <text>考勤次数</text>
+        <view class="container">
+             <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
+        </view>
+    </view>
+
+</view>
+
+<view class='info'>
+      <text>成员详情</text>
+      <text>缺勤</text>
+      <text>出勤率</text>
+      <text>出勤</text>
+</view>  
+<view class='content' wx:for="{{memberDetail}}">
+  <view class='member'>
+    <image src='{{item.imagePath}}'></image>
+  </view>
+  <view class='memberName'>
+    <text>{{item.memberName}}</text>
+    <text>{{item.memberQ}}</text>
+    <text>{{item.memberC}}</text>
+     <text>{{item.memberCA}}%</text>
+  </view>
+</view>

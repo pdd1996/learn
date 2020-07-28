@@ -1,0 +1,102 @@
+/* pages/course/activity/activity.wxss */
+
+.nav{
+  font-size: 15px;
+  position: fixed;
+ 
+  top: 0px;
+  width: 100%;
+  height: 40px;
+
+}
+.left{
+  position: absolute;
+  top: 10px;
+  left: 20%;
+}
+.center{
+  position: absolute;
+  top: 10px;
+  left: 45%;
+}
+.right{
+  position: absolute;
+  top: 10px;
+  left: 75%;
+}
+
+ .container{
+  width: 100%;
+  margin-top: 80rpx;
+  height: 100rpx;
+  padding-bottom: 120rpx;
+}
+.container .content{
+  width: 100%;
+  
+}
+ .container .task{
+  width: 94%;
+  height: 210rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  position: relative;
+  border-bottom: 2rpx solid #ccc;
+}
+ .task .img{
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 5%;
+  top: 20%
+}
+  .task .img image{
+  width: 100%;
+  height: 100%;
+}
+  .task .info{
+  width: 100%;
+  position: relative;
+}
+
+ .task .info text:first-child{
+  position: absolute;
+  left: 30%;
+  top: 90rpx;
+}
+  .task .info text:nth-child(2){
+   position: absolute;
+   left: 7%;
+   top: 170rpx;
+}
+  .task .info text:nth-child(3){
+   position: absolute;
+   left: 45%;
+   top: 170rpx;
+}
+ .task .state{
+    width: 100%;
+    position: relative
+}
+ .task .state .stateImg{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    display: inline-block;
+    left: 80%;
+    top:  167rpx;
+}
+.task .state .stateImg image{
+    width: 100%;
+    height: 100%;
+}
+ .task .state .stateInfo{
+    width: 100%;
+}
+.task .state .stateInfo text{
+    position: absolute;
+    display: inline-block;
+    left: 86%;
+    top:  170rpx;
+}

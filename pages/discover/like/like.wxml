@@ -1,0 +1,13 @@
+<!--pages/discover/like/like.wxml-->
+<view class='header'>
+    <text>猜你喜欢以下课程</text>
+</view>
+
+<view class='content'>
+    <view class='blockAll'>
+        <view class='block' wx:for="{{lesson}}">
+            <image src='{{item.imagePath}}'></image>
+            <text>{{item.lessonName}}</text>
+        </view>
+    </view>   
+</view>

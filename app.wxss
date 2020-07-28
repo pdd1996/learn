@@ -1,0 +1,57 @@
+@import 'style/weui.wxss';
+page{
+  font-size: 24rpx;
+  background-color: #F7F9F9; 
+  font-family: mircsoft yahei;
+}
+.tabbar_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 120rpx;
+    border-top: 1rpx solid #d7d7d7; 
+}
+
+.tabbar_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    height: 100%;
+}
+
+.tabbar_icon{
+    width: 50rpx;
+    height:50rpx;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+ /* .tabbar_nav:nth-child(3) image{ 
+    position:relative;
+    top:-32rpx;
+    width:80rpx;
+    height:80rpx;
+}
+.tabbar_nav:nth-child(2) text{  
+    position:relative; 
+    top:-32rpx;
+}  */

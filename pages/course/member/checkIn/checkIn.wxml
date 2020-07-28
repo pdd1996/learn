@@ -1,0 +1,24 @@
+<!--pages/course/member/checkIn/checkIn.wxml-->
+<button bindtap="setGive">放弃</button>
+<button bindtap="setEnd">结束</button>
+
+<view class='info'>
+  <text>当前签到人数:{{currentNumber}}</text>
+  <text>总人数:{{totalNumber}}</text>
+</view>  
+
+<view class="container">
+    <view wx:for="{{checkIn}}">
+        <view class="content">
+            <view wx:if="{{item.state == 1}}">
+                <text>{{item.name}}</text>
+                <text>{{item.time}}</text>
+            </view> 
+            <view wx:if="{{item.state == 0}}" style="color:#ccc">
+                <text>{{item.name}}</text>
+                <text>{{item.time}}未签到</text>
+            </view>
+            
+        </view>
+    </view>    
+</view>

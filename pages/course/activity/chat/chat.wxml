@@ -1,0 +1,18 @@
+<!--pages/course/activity/addTask/addTask.wxml-->
+
+<!--test.wxml-->
+<view style="padding-top:30px;">
+    <view wx:for="{{loop}}" wx:key="id" bindlongtap="ltap" data-id="{{item.id}}"  class="{{item.class}}" style="display:{{item.visible}};">
+        {{item.opt}} 
+        <view class="sharp"></view>
+        <view class="headico"><image src="{{item.head}}" mode="aspectFill" class="headimg"></image></view>
+        <view wx:if="{{ item.id == value }}" class="anniu">
+            <view bindtap="click_blank" class="mask"></view> 
+            <view bindtap="del" class="deleteBtn" data-id="{{item.id}}">
+                删除
+                <view class="del-sharp"></view>
+            </view>
+        </view>
+        <view wx:else></view>
+    </view>
+</view>

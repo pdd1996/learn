@@ -1,0 +1,144 @@
+/* pages/course/details/details.wxss */
+
+.header{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  height: 250rpx;
+  position: relative;
+}
+.header .img{
+  width: 150rpx;
+  height: 150rpx;
+  border: solid 1px #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 8%;
+  top: 20%;
+}
+.header .img image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.header .details{
+  width: 100%;
+  height: 100%;
+  position: relative
+}
+.header .details text:first-child{
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+.header .details text:nth-child(2){
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.header .details text:nth-child(3){
+  position: absolute;
+  left: 40%;
+  top: 60%;
+}
+
+.buildtime{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx
+ 
+}
+.buildtime text{
+   padding-left:10%; 
+}
+
+.studynumber{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx
+ 
+}
+.studynumber text{
+   padding-left:10%; 
+}
+
+.coursecomment{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx
+ 
+}
+.coursecomment text{
+   padding-left:10%; 
+}
+
+.coursecomment .rightarrow{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  float: right;
+  padding-top: 15rpx;
+  padding-right: 20rpx;
+}
+.coursecomment .rightarrow image{
+  width: 100%;
+  height: 100%;
+}
+
+.detail{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx
+ 
+}
+.detail text{
+   padding-left:10%; 
+}
+
+.zhiding{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx
+ 
+}
+.zhiding text{
+   padding-left:10%; 
+}
+.zhiding .zd{
+  display: inline-block;
+  float: right;
+}
+
+.btn{
+  width: 90%;
+  margin-top: 40rpx;
+  background-color: #97C8E3;
+}
+.btn::after{
+  border: 0;
+}
+.btn_hover{
+  background-color: pink;
+}

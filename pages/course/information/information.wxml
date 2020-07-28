@@ -1,0 +1,77 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='bc'>
+  <block wx:if="{{state==1}}">
+  <view class='nav'>
+    <view class='left' style="color:#000" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#ccc" bindtap='changeState' data-state='2'>未读</view>
+    <view class='right' style="color:#ccc" bindtap='changeState' data-state='3'>已读</view>
+  </view>
+
+  <view class='container'>
+  <view class='content'>
+      <view class='task' wx:for="{{task}}">
+            <view class='state'>
+              <view wx:if="{{item.state == 1}}">
+                   <view class='info'>
+                     <text>{{item.type}}</text>
+                     <text>{{item.name}}</text>
+                     <text>于{{item.data}} {{item.time}}发布</text>
+                   </view>
+              </view>  
+              <view wx:if="{{item.state == 0}}">
+                  <view class='info'>
+                     <text>{{item.type}}</text>
+                     <text>{{item.name}}</text>
+                     <text>于{{item.data}} {{item.time}}发布</text>
+                   </view>
+              </view>  
+          </view> 
+      </view>
+    </view>
+  </view>
+  </block>
+
+  <block wx:if="{{state==2}}" >
+  <view class='nav'>
+    <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#000" bindtap='changeState' data-state='2'>未读</view>
+    <view class='right' style="color:#ccc" bindtap='changeState' data-state='3'>已读</view>
+  </view>
+  <view class='container'>
+   <view class='content'wx:for="{{task}}">
+   <block wx:if="{{item.state == 1 }}">
+      <view class='task' >
+         <view class='info'>
+              <text>{{item.type}}</text>
+              <text>{{item.name}}</text>
+              <text>于{{item.data}}{{item.time}}发布</text>
+          </view>
+      </view>
+    </block>
+    </view>
+  </view>
+  </block>
+
+
+  <block wx:if="{{state==3}}">
+  <view class='nav'>
+    <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#ccc" bindtap='changeState' data-state='2'>未读</view>
+    <view class='right' style="color:#000" bindtap='changeState' data-state='3'>已读</view>
+  </view>
+  <view class='container'>
+   <view class='content' wx:for="{{task}}">
+    <block wx:if="{{item.state == 0}}">
+      <view class='task' >
+       <view class='info'>
+            <text>{{item.type}}</text>
+            <text>{{item.name}}</text>
+            <text>于{{item.data}}{{item.time}}发布</text>
+        </view>
+      </view>
+    </block>
+   </view>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/mine/mine.wxml-->
+<view class='header'>
+  <view class='img'>
+    <image></image>
+  </view>
+  <view class='user'>
+    <text>{{userName}}</text>
+    <text>获得经验：{{userExp}}</text>
+  </view>
+</view>
+
+<view class='introduce '>
+  <text>{{introduce}}</text>
+</view>
+
+<view class='info'>
+  <text>最近学习</text>
+  <text>更多</text>
+</view>   
+
+<view class='content' wx:for="{{lessonDetail}}">
+  <view class='lesson'>
+    <image src='{{item.imagePath}}'></image>
+  </view>
+  <view class='lessonName'>
+    <text>{{item.lessonName}}</text>
+  </view>
+</view>
+
+<view class='detail'><text>我的学习/教学时长：{{detail}}小时</text></view>
+ 

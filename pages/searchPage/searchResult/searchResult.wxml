@@ -1,0 +1,178 @@
+<view class="weui-search-bar">
+   <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="请输入查询内容" value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+      <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view> 
+  </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+         <text  data-key='search'>搜索</text>
+     </view>
+</view>
+
+<view class='bc'>
+    <block wx:if="{{state==1}}">
+        <view class='nav'>
+            <view class='left' style="color:#000" bindtap='changeState' data-state='1'>全部</view>
+            <view class='lcenter' style="color:#ccc" bindtap='changeState' data-state='2'>课程</view>
+            <view class='rcenter' style="color:#ccc" bindtap='changeState' data-state='3'>教师</view>
+            <view class='right' style="color:#ccc" bindtap='changeState' data-state='4'>学员</view>
+        </view>
+
+        <view class="full">
+          <view class="container" wx:if="{{ctype==1}}">
+            <text class="class">课程</text>
+            <text class="class">更多</text>
+            <view class='content'>
+                <view wx:for="{{class}}">
+                  <view class='class'>
+                    <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                    </view>
+                    <view class='info2'>
+                      <text>{{item.classGrading}}分</text>
+                      <text>{{item.className}}</text>
+                      <text>{{item.teacherName}}</text>
+                      <text>{{item.classNumber}}人</text>
+                    </view>
+                  </view>
+                </view>
+            </view>
+            
+          </view>
+
+          <view class="container" wx:if="{{ttype==1}}">
+            <text class="class">老师</text>
+            <text class="class">更多</text>
+            <view class='content'>
+              <view wx:for="{{teacher}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+
+          <view class="container" wx:if="{{stype==1}}">
+            <text class="class">学生</text>
+            <text class="class">更多</text>
+            <view class='content'>
+              <view wx:for="{{student}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+      </view>
+    </block>
+
+    <block wx:if="{{state==2}}" >
+        <view class='nav'>
+            <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+             <view class='lcenter' style="color:#000" bindtap='changeState' data-state='2'>课程</view>
+            <view class='rcenter' style="color:#ccc" bindtap='changeState' data-state='3'>教师</view>
+            <view class='right' style="color:#ccc" bindtap='changeState' data-state='4'>学员</view>
+        </view>
+         <view class="full">
+          <view class="container" wx:if="{{ctype==1}}">
+            <text class="class">课程</text>
+            <text class="class">更多</text>
+            <view class='content'>
+                <view wx:for="{{class}}">
+                  <view class='class'>
+                    <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                    </view>
+                    <view class='info2'>
+                      <text>{{item.classGrading}}分</text>
+                      <text>{{item.className}}</text>
+                      <text>{{item.teacherName}}</text>
+                      <text>{{item.classNumber}}人</text>
+                    </view>
+                  </view>
+                </view>
+            </view>
+          </view>
+        </view>
+    </block>
+
+    <block wx:if="{{state==3}}">
+        <view class='nav'>
+            <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+            <view class='lcenter' style="color:#ccc" bindtap='changeState' data-state='2'>课程</view>
+            <view class='rcenter' style="color:#000" bindtap='changeState' data-state='3'>教师</view>
+            <view class='right' style="color:#ccc" bindtap='changeState' data-state='4'>学员</view>
+        </view>
+        <view class="full">
+          <view class="container" wx:if="{{ttype==1}}">
+            <text class="class">老师</text>
+            <text class="class">更多</text>
+            <view class='content'>
+              <view wx:for="{{teacher}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+        </view>
+    </block>
+
+      <block wx:if="{{state==4}}">
+        <view class='nav'>
+            <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+            <view class='lcenter' style="color:#ccc" bindtap='changeState' data-state='2'>课程</view>
+            <view class='rcenter' style="color:#ccc" bindtap='changeState' data-state='3'>教师</view>
+            <view class='right' style="color:#000" bindtap='changeState' data-state='4'>学员</view>
+        </view>
+        <view class="full">
+          <view class="container" wx:if="{{stype==1}}">
+            <text class="class">学生</text>
+            <text class="class">更多</text>
+            <view class='content'>
+              <view wx:for="{{student}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+        </view>
+    </block>
+</view>     

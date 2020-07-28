@@ -1,0 +1,43 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+
+<view class='header'>
+    <view>
+        <text>第{{number}}名</text>
+        <text>当前经验{{exp}}经验值</text>
+    </view> 
+</view>
+
+<view class='block'>
+    <view class='circleAll'>
+
+    <view class='circle'>
+        <text>签到</text>
+    </view>
+
+    <view class='circle'>
+        <view class='video'>
+             <image src='/images/video.png'></image> 
+        </view>
+    </view>
+
+    <view class='circle'>
+        <text>讨论</text>
+    </view>
+    </view>
+</view>
+
+<view class='info'>
+  <text>成员总数</text>
+  <text>{{member}}人</text>
+</view>  
+<view class='content' wx:for="{{memberDetail}}">
+  <view class='member'>
+    <image src='{{item.imagePath}}'></image>
+  </view>
+  <view class='memberName'>
+    <text>{{item.memberName}}</text>
+    <text>{{item.memberNo}}.</text>
+    <text>{{item.memberExp}}经验值</text>
+  </view>
+</view>

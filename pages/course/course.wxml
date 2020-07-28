@@ -1,0 +1,29 @@
+<!--pages/course/course.wxml-->
+<view class='header'>
+  <view class='search'>
+    <view class='img'>
+      <image src='/images/search.png'></image>
+    </view>
+    <input placeholder='搜索' />
+  </view>
+  <view class='add'>
+    <image src='/images/add.png'></image>
+  </view>
+</view>
+
+
+<view class='content'>
+  <view wx:for="{{class}}">
+    <view class='class'bindtap='detail'>
+      <view class='img'>
+        <image src='{{item.imagePath}}'></image>
+      </view>
+      <view class='info'>
+        <text>{{item.className}}</text>
+        <text>{{item.classCourse}}</text>
+        <text>{{item.classTeacher}}</text>
+        <text>学校课表班课</text>
+      </view>
+    </view>
+  </view>
+</view>

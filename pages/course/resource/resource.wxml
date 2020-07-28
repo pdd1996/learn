@@ -1,0 +1,19 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+
+<view class='content'>
+  <view wx:for="{{class}}">
+    <view class='class'bindtap='detail'>
+      <view class='img'>
+        <image src='{{item.imagePath}}'></image>
+      </view>
+      <view class='info'>
+        <text>{{item.ResourceName}}</text>
+        <text>{{item.ResourceSize}}</text>
+        <text>{{item.ResourceTime}}</text>
+        <text>{{item.ResourceLook}}</text>
+        <text>{{item.ResourceExperience}}</text>
+      </view>
+    </view>
+  </view>
+</view>

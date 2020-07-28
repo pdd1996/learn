@@ -1,0 +1,92 @@
+<view class="weui-search-bar">
+   <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="请输入查询内容" value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+      <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view> 
+  </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+         <text  data-key='search'>搜索</text>
+     </view>
+</view>
+
+
+<view class="content">
+	<scroll-view class="tabButtonAll" id="tabButtonAll" scroll-x scroll-with-animation scroll-left="{{line.scrLeft}}">
+		<view class="tabBtn {{index == line.oldActive ? 'active' : ''}}" wx:for="{{list}}" bindtap="lineInfo" id="{{index}}">{{item.name}}</view>
+		<div class="line" style="width:{{line.width}}px;left:{{line.left}}px"></div>
+	</scroll-view>
+	<swiper current="{{line.swipeIndex}}" duration="300" bindchange="swipeChange"> 
+		<swiper-item wx:for="{{list}}">
+    
+    <view class="full">
+          <view class="container" wx:if="{{item.l==2||item.l==1}}">
+            <text class="class">课程</text>
+            <text class="class">更多</text>
+            <view class='content1'>
+                <view wx:for="{{class}}">
+                  <view class='class'>
+                    <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                    </view>
+                    <view class='info2'>
+                      <text>{{item.classGrading}}分</text>
+                      <text>{{item.className}}</text>
+                      <text>{{item.teacherName}}</text>
+                      <text>{{item.classNumber}}人</text>
+                    </view>
+                  </view>
+                </view>
+            </view>
+            
+          </view>
+
+          <view class="container" wx:if="{{item.l==3||item.l==1}}">
+            <text class="class">老师</text>
+            <text class="class">更多</text>
+            <view class='content1'>
+              <view wx:for="{{teacher}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+
+          <view class="container" wx:if="{{item.l==4||item.l==1}}">
+            <text class="class">学生</text>
+            <text class="class">更多</text>
+            <view class='content1'>
+              <view wx:for="{{student}}">
+                <view class="class">
+                  <view class='img'>
+                      <image src='{{item.imagePath}}'></image>
+                  </view>
+                  <view class='info1'>
+                      <text>{{item.className}}</text>
+                      <text>{{item.classCourse}}</text>
+                      <text>{{item.classTeacher}}</text>
+                      <text>{{item.type}}</text>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </view>
+      </view>
+    
+    
+    
+    </swiper-item>
+	</swiper>
+</view>

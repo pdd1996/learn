@@ -1,0 +1,111 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='bc'>
+  <block wx:if="{{state==1}}">
+  <view class='nav'>
+    <view class='left' style="color:#000" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#ccc" bindtap='changeState' data-state='2'>未完成</view>
+    <view class='right' style="color:#ccc" bindtap='changeState' data-state='3'>已完成</view>
+  </view>
+
+  <view class='container'>
+    <view class='content'>
+      <view class='task' wx:for="{{task}}">
+          <view class='img'>
+              <image src='{{item.imagePath}}'></image>
+          </view>
+          <view class='info'>
+              <text>{{item.type}}</text>
+              <text>{{item.number}}人参与</text>
+              <text>{{item.exp}}经验</text>
+          </view>
+            <view class='state'>
+              <view wx:if="{{item.state == 1}}">
+                  <view class='stateImg'>
+                      <image src='/images/continue.png'></image>
+                  </view>
+                  <view class='stateInfo'>
+                      <text>进行中</text>
+                  </view>
+              </view>  
+              <view wx:if="{{item.state == 0}}">
+                  <view class='stateImg'>
+                      <image src='/images/end.png'></image>
+                  </view>
+                  <view class='stateInfo'>
+                      <text>已结束</text>
+                  </view>
+              </view>  
+            </view> 
+      </view>
+    </view>
+  </view>
+
+  </block>
+
+  <block wx:if="{{state==2}}" >
+  <view class='nav'>
+    <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#000" bindtap='changeState' data-state='2'>未完成</view>
+    <view class='right' style="color:#ccc" bindtap='changeState' data-state='3'>已完成</view>
+  </view>
+  <view class='container'>
+   <view class='content'wx:for="{{task}}">
+   <block wx:if="{{item.state == 1 }}">
+      <view class='task' >
+          <view class='img'>
+              <image src='{{item.imagePath}}'></image>
+          </view>
+          <view class='info'>
+              <text>{{item.type}}</text>
+              <text>{{item.number}}人参与</text>
+              <text>{{item.exp}}经验</text>
+          </view>
+            <view class='state'>
+                  <view class='stateImg'>
+                      <image src='/images/continue.png'></image>
+                  </view>
+                  <view class='stateInfo'>
+                      <text>进行中</text>
+                  </view>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  </block>
+
+   <block wx:if="{{state==3}}">
+  <view class='nav'>
+    <view class='left' style="color:#ccc" bindtap='changeState' data-state='1'>全部</view>
+    <view class='center' style="color:#ccc" bindtap='changeState' data-state='2'>未完成</view>
+    <view class='right' style="color:#000" bindtap='changeState' data-state='3'>已完成</view>
+  </view>
+  <view class='container'>
+   <view class='content' wx:for="{{task}}">
+    <block wx:if="{{item.state == 0}}">
+      <view class='task' >
+          <view class='img'>
+              <image src='{{item.imagePath}}'></image>
+          </view>
+          <view class='info'>
+              <text>{{item.type}}</text>
+              <text>{{item.number}}人参与</text>
+              <text>{{item.exp}}经验</text>
+          </view>
+            <view class='state'> 
+              <view>
+                  <view class='stateImg'>
+                      <image src='/images/end.png'></image>
+                  </view>
+                  <view class='stateInfo'>
+                      <text>已结束</text>
+                  </view>
+              </view>  
+            </view>
+          </view>
+          </block>
+    </view>
+  </view>
+  </block>
+</view>

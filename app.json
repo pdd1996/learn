@@ -1,0 +1,52 @@
+{
+    "pages":[
+    "pages/course/member/statistics/statistics",
+    "pages/course/member/checkIn/checkIn",
+    "pages/course/member/sign/sign",
+    "pages/course/activity/chat/chat",
+    "pages/searchPage/test/test",
+    "pages/searchPage/searchResult/searchResult",
+    "pages/searchPage/test2/test2",
+    "pages/course/course",
+    "pages/course/activity/activity",
+    "pages/course/activity/task/task",
+    "pages/searchPage/searchPage",
+    "pages/discover/discover",
+    "pages/discover/like/like",
+    "pages/mine/mine",
+    "pages/course/resource/resource",
+    "pages/course/information/information",
+    "pages/course/details/details",
+    "pages/course/details/comment/comment",
+    "pages/course/member/member"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的课程",
+    "navigationBarTextStyle":"black"
+  },"tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "课堂",
+        "iconPath": "images/tabBar/class.png",
+        "selectedIconPath": "images/tabBar/class_b.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/tabBar/star.png",
+        "selectedIconPath": "images/tabBar/star_b.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabBar/user.png",
+        "selectedIconPath": "images/tabBar/user_b.png"
+      }
+    ]
+  }
+  
+
+}

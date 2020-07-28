@@ -1,0 +1,32 @@
+/* pages/discover/like/like.wxss */
+.header{
+  width: 100%;
+  height: 80rpx;
+  padding-top: 30rpx;
+}
+.header text{
+  margin-left: 5%;
+  
+}
+.content{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  padding-bottom: 30rpx;
+}
+.content .blockAll{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center
+}
+.content .blockAll .block{
+  margin:30rpx;
+  width:  40%;
+  height: 200rpx;
+}
+.content .blockAll .block image{
+  width: 100%;
+  height: 100%;
+}

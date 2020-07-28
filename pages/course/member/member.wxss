@@ -1,0 +1,123 @@
+/* pages/course/member/member.wxss */
+.header{
+  margin: 0 auto;
+  height: 200rpx;
+}
+.header view{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.header view text:first-child{
+  position: absolute;
+  left: 42%;
+  top:20%;
+  font-size: 40rpx;
+}
+.header view text:last-child{
+   position: absolute;
+   left: 33%;
+   top:60%;
+   font-size: 30rpx;
+}
+
+.block{
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  height: 200rpx;
+  background: #fff;
+  box-shadow: 2rpx  2rpx #ccc;
+}
+.block .circleAll{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.block .circleAll .circle{
+   width: 20%;
+   height: 120rpx;
+   margin-top:5%; 
+   position: relative;
+   border-radius: 50%;
+   background: #97C8E3;
+}
+ .block .circle .video{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 15% 0 0 20%
+}
+.block .circle .video image{
+  width: 100%;
+  height: 100%;
+} 
+
+.block .circleAll .circle text{
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  font-size: 30rpx;
+}
+
+
+
+.info{
+  height: 30rpx;
+  margin: 30rpx 0;
+}
+.info text:first-child{
+  float: left;
+  margin-left:6%;
+  font-size: 25rpx;
+} 
+.info text:last-child{
+  float: right;
+  margin-right: 6%;
+  font-size: 25rpx;
+} 
+
+.content{
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  margin-left:3%;
+  height: 150rpx;
+  position: relative;
+  border-bottom: 1rpx solid #ccc
+}
+.content .member{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+}
+.content .member image{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.content .memberName{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.content .memberName text:first-child{
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.content .memberName text:nth-child(2){
+  position: absolute;
+  left: 7%;
+  top: 40%;
+}
+.content .memberName text:last-child{
+  position: absolute;
+  left: 80%;
+  top: 40%;
+}
+

@@ -1,0 +1,47 @@
+/* pages/course/member/checkIn/checkIn.wxss */
+.container{
+    width: 94%;
+    background: #fff;
+    margin:0 auto;
+    margin-top: 40rpx;
+}
+.container .content{
+    height: 100rpx;
+    position: relative;
+    border-bottom: 2rpx solid #ccc
+}
+.container .content text:first-child{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+.container .content text:last-child{
+    position: absolute;
+    left: 75%;
+    top: 30%;
+}
+
+button:first-child{
+    width: 47%;
+    display: inline-block;
+    margin-left: 3%;
+}
+button:nth-child(2){
+    width: 47%;
+    display: inline-block;
+    color: #8E97AE
+}
+.info{
+    height: 30rpx;
+    margin: 30rpx 0;
+  }
+  .info text:first-child{
+    float: left;
+    margin-left:3%;
+    font-size: 25rpx;
+  } 
+  .info text:nth-child(2){
+    float: right;
+    margin-right: 4%;
+    font-size: 25rpx;
+  } 

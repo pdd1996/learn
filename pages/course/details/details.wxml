@@ -1,0 +1,39 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+
+<view class='header'>
+  <view class='img'>
+    <image></image>
+  </view>
+  <view class='details'>
+    <text>{{detailsclass}}</text>
+    <text>{{detailscourse}}</text>
+    <text>{{detailsteacher}} 学校课表课程</text>
+  </view>
+</view>
+
+<view class='buildtime '>
+  <text>创建时间: {{buildtime}}</text>
+</view>
+
+<view class='studynumber '>
+  <text>学习人数: {{studynumber}}</text>
+</view>
+
+<view bindtap='comment'>
+<view class='coursecomment '>
+  <text>课程评价</text>
+  <view class='rightarrow'>
+   <image src='/images/sucai/rightarrow.png'></image>
+  </view>
+</view>
+</view>
+
+<view class='detail'><text>我的学习时长：{{detail1}}小时{{detail2}}分钟</text></view>
+
+<view class='zhiding'>
+  <text>置顶课程</text>
+   <switch class='zd' bindchange="switch1Change" />
+</view>
+
+<button class='btn' bindtap='exit' hover-class='btn_hover'>退出课程学习</button>

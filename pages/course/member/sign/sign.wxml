@@ -1,0 +1,19 @@
+<!--pages/course/member/sign.wxml-->
+<view class='header'>
+    <view class='box'>发起一键签到</view>
+</view>
+
+<view class='info'>
+  <text>历史签到记录，左滑可以删除</text>
+  <text>统计</text>
+</view>  
+ 
+<view class="container">
+    <view wx:for="{{recording}}">
+        <view class="content"> 
+            <text>{{item.date}} 签到</text>
+            <text>{{item.unsign}}人/{{item.sign}}人</text>
+            <text>{{item.time}}</text>
+        </view>
+    </view>    
+</view>
